@@ -4,13 +4,15 @@
 
 ## Lab 1: Azure
 
-  1. Create a Free Azure Account
+  1. Create a Free Azure Account with a personal email
     - https://azure.microsoft.com/en-us/free/
 
   2. If you do not have Azure CLI installed, run:
       ```
       $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
       ```
+  2.  If you have issues installing with that command, you can install Azure CLI here using the MSI: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
+
   3. Open a new Powershell Prompt or VS Code Terminal in Administrator
 
   4. Create a Service Principal (SPN) for Automation
