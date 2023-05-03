@@ -76,6 +76,16 @@
   choco install terraform
   ```
 
+#### Install Terraform with Executable
+1. Open the following link: https://developer.hashicorp.com/terraform/downloads
+2. Download the terraform ZIP file from Terraform site.
+3. Extract the .exe from the ZIP file to a folder eg C:\Terraform copy this path location like C:\terraform\
+4. Add the folder location to your PATH variable,
+5. eg: Control Panel -> System -> System settings -> Environment Variables
+6. In System Variables, select Path > edit > new > Enter the location of the Terraform .exe, eg C:\Terraform then click OK
+7. Open a new CMD/PowerShell and the Terraform command should work
+
+
 ### Install Required Extensions:
   1. In GitHub, select `Extensions` on the left-hand menu
   2. Search for and install the following extensions (Required):
