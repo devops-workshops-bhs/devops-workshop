@@ -67,7 +67,7 @@
   git config --globabl user.username `<YOUR GITHUB ACCOUNT NAME HERE>`
   ```
 
-### Intall Terraform
+### Install Terraform
 
 #### Install Terraform with Choco
 1. Open an administrator terminal (VSC, CMD or PS)
