@@ -62,7 +62,7 @@
 ### Configure GIT:
   1. Open VS Code
   2. Open a new terminal
-  3. Link your GitHub account:
+  3. Link your BHS GitHub account:
   ```
   git config --globabl user.username `<YOUR GITHUB ACCOUNT NAME HERE>`
   ```
