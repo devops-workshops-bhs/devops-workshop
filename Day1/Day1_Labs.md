@@ -87,7 +87,7 @@
 
 
 ### Install Required Extensions:
-  1. In GitHub, select `Extensions` on the left-hand menu
+  1. In VS Code, select `Extensions` on the left-hand menu
   2. Search for and install the following extensions (Required):
       - Azure CLI Tools: This extension provides Intellisense and snippets for Azure CLI in VS Code
       - Azure Terraform : This extension supports Terraform commands and visual assistance with developing Terraform
