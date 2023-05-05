@@ -1,0 +1,73 @@
+smillion
+{
+  "appId": "0022a4f3-3386-4db8-a241-266abb6f9186",
+  "displayName": "spn-tf-smillion",
+  "password": "78w8Q~FAkXdJ9KrAvKIOPZeX-0KvxAH-R0U9bdv4",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+
+csprinkle
+{
+  "appId": "2e4c0263-680e-4d51-8367-0999a4c57e2b",
+  "displayName": "spn-tf-csprinkle",
+  "password": "R4U8Q~2VoJLeEOxr_hf_JWLK.YpBH8rO-IUffaxt",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+chubbs
+{
+  "appId": "72087c4c-f3c7-4df6-8332-ec4c66ce0cef",
+  "displayName": "spn-tf-chubbs",
+  "password": "BGj8Q~4CiFiCbH_KA0FVnR9BbAjHYYofDMpO8c8g",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+mshareef
+{
+  "appId": "70dee05a-5bb2-4b19-914c-500852fc7068",
+  "displayName": "spn-tf-mshareef",
+  "password": "gN-8Q~G1SkkBL0BtB3Pp4xQwDBO1g4tDpggXIbOl",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+dhoffman
+{
+  "appId": "78bb4e33-a93d-4ba8-b0af-80aa2c2e9622",
+  "displayName": "spn-tf-dhoffman",
+  "password": "Mvl8Q~Rn7DRcBchqhh.5Z6sozAnuDGOBH9sbqc1K",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+pherde
+{
+  "appId": "0d440374-197e-48c0-b42e-4e4be8c7457a",
+  "displayName": "spn-tf-pherde",
+  "password": "Jdi8Q~86V0rcqSXkFG~YxujhDRwqYL.tMo7TwcX-",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+gpampati
+{
+  "appId": "255a521d-19a1-43f2-b8f6-bd6721685bf5",
+  "displayName": "spn-tf-gpampati",
+  "password": "TvY8Q~di2TZXXgOxRDcSkTunJ4VAXJlXkvRXbapK",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+croberts
+{
+  "appId": "3f47ddef-652c-4de9-8224-0b90b14ee6c7",
+  "displayName": "spn-tf-croberts",
+  "password": "EXO8Q~xikLws~37kzRJSwf_NsYvbW9DNuppQadA2",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+acollins
+{
+  "appId": "80ff7bcf-5efe-4597-9c31-793f1702b396",
+  "displayName": "spn-tf-acollins",
+  "password": "qYS8Q~Stu2DQFP-cJdfGRpNdoGLslfJlA4PejbaT",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+cfleischer
+{
+  "appId": "0b8a77b4-431f-458c-a260-c68de07eb1c8",
+  "displayName": "spn-tf-cfleischer",
+  "password": "zQX8Q~m5L4rF8Xn.plvg_jnSp1f0NFthS.zj5cgR",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+ttodd
+

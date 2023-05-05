@@ -1,4 +1,5 @@
-# Day 2 Labs: Terraform and GitHub
+# Day 3 Labs: Terraform and GitHub
+- These labs match the demos performed on Day 2 and build upon what was demo'ed
 
 ## Lab 3: Terraform CLI / OSS
 
@@ -35,10 +36,10 @@
     provider "azurerm" {
       features {}
 
-      client_id       = "<Insert your appId value here>"
-      client_secret   = "<Insert your password value here>"
-      tenant_id       = "<Insert your tenant value here">
-      subscription_id = "<Insert your subscription ID here>"
+      client_id       = "9a709a52-7f63-46fa-9cb3-4a24b8d012ef"
+      client_secret   = "< INSERT_YOUR_CLIENT_SECRET_HERE >"
+      tenant_id       = "a198e3af-4618-44df-8241-0f411c95e41c"
+      subscription_id = "2276ba88-e0b2-4c57-a2b6-c21bf9c971a2"
     }
     ```
 10. Run:
@@ -57,7 +58,7 @@
 14. Take note of the updated Terraform version that is now displayed in your terminal.
 
 
-### Create a Resource Group named `backend-rg`
+### Plan Outputs and Initial Resource Group Deployment
 
 1. Open https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group to review the Terraform Documentation for Azure Resource Groups, or azurerm.resource_groups resource.
 2. Review the Arguments Reference
@@ -68,8 +69,9 @@
 7. This should look something like this:
     ```
     resource "azurerm_resource_group" "tf_name"
-      name = "backend_<your first name>_rg"
-      location = "East US 2"
+      name = "rg-<name prefix>-eus2"              # REPLACE <name prefix> with the first letter of your first name and full last name, i.e. jbaldridge
+      location = "East US 2"                      # Use East US 2, BHS's primary region
+    ```
 8. Once complete, save your file with CTRL+S
 9. Perform the Holy Trinity, the best friend to any Terraform Developer:
     ```
@@ -98,20 +100,32 @@
 
 
 ## Lab 4: GitHub
+
 ### Create a personal GitHub account
   - https://github.com
   - Alternatively, you may use your BHS GitHub account
+
 ### Creaet an Organization
-  -
+  1. In the upper-right corner of any page, click the `+` drop-down, then click `New organization`.
+  2. Select `Join for free`
+  3. Create an Organization account name
+  4. Enter your Contact email
+  5. Choose whether the organization belongs to your `Personal account` (i.e. your GitHub account) or `A business or institution` (the BHS Enterprise)
+  6. Verify your account
+  7. Accept the Terms of Service
+  8. Select next
+  9. Select Complete setup
+
 ### Create a Repo
-1. In the upper-right corner of any page, use the  drop-down menu, and select New repository.
-2. Type a short, memorable name for your repository. For example, "hello-world".
-3. Optionally, add a description of your repository. For example, "My first repository on GitHub."
-4. Choose a repository visibility. For more information, see "About repositories."
-5. Select Initialize this repository with a README.
-6. Click Create repository.
-7. Once created, click the green `Code` button within your Repository
-8. Select and copy the HTTPS URL. You will use this in the next lab
+
+  1. In the upper-right corner of any page, use the  drop-down menu, and select New repository.
+  2. Type a short, memorable name for your repository. For example, "hello-world".
+  3. Optionally, add a description of your repository. For example, "My first repository on GitHub."
+  4. Choose a repository visibility. For more information, see "About repositories."
+  5. Select Initialize this repository with a README.
+  6. Click Create repository.
+  7. Once created, click the green `Code` button within your Repository
+  8. Select and copy the HTTPS URL. You will use this in the next lab
 
 ### Clone your new repo to your VS Code
 1. Login to GitHub in VS Code
@@ -135,6 +149,7 @@
 6. You should also see your new files that have been pushed to the repository.
 
 ## Lab 5: Terraform Cloud
+
 ## Exercise	Create a personal Terraform Cloud Org	20 min
 
 ### Create a TFC Account and Organization
@@ -225,6 +240,31 @@
 12. Allow the Apply to finish, and you should now see your resource group has been deployed.
 13. Congrats, you have performed your first `Terraform Apply` with Terraform Cloud!
 
-
-
-
+## Using Variables
+1. Create a file named `variables.tf`
+2. create a variable block:
+  ```
+  variable "name_prefix" {
+    description = "Prefix used for naming conventions"
+    type = string
+    default = ""
+  }
+  ```
+3. Next, create a .TFVARS file called `terraform.tfvars`
+4. Define your variable value:
+  ```
+  name_prefix = "jbaldridge"
+  ```
+    - Your variable should be named `name_prefix`
+    - The value should be your first name's first letter and your last name, as seen above
+5. Now modify your resource group block to use this prefix. Change:
+  ```
+  name = "rg-jbaldridge-eus2"
+  ```
+  and make this be like the following:
+  ```
+  name = "rg-${var.name_prefix}-eus2"
+  ```
+6. Perform the trinity to commit and push your code
+7. Run a Terraform Plan in your TFC Workspace
+8. You should now see no changes, as this should match the current resource group configuration

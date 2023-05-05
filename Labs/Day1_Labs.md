@@ -1,6 +1,6 @@
 # Baptist Health DevOps Workshop for Azure, Terraform and GitHub
 
-# Lab Instructions:
+# Day 1 Lab: Azure and VS Code
 
 ## Lab 1: Azure
 
@@ -101,83 +101,3 @@
 
   3. Install additional helpful extensions (Optional, Recommended):
 
-
-
-## Lab 3: Terraform
-
-### Create your Provider File:
-1. Open VS Code
-2. Select `Open Folder` on the main page
-3. Navigate to a folder to contain your repo
-4. Right-click and create a new folder
-5. Select the folder you just created and click `Select Folder`
-6. Right click in the menu under your folder name that has been opened in VS Code and select `New File`
-7. Give this file the name `provider.tf` or `main.tf` depending on your preferences
-8. Open your .txt files from earlier when we created our Azure `SPN` in `Lab 1`. Note:
-    These values map to the Terraform variables like so:
-    ```
-    appId is the client_id defined above.
-    password is the client_secret defined above.
-    tenant is the tenant_id defined above.
-    ```
-9. Create the base provider blocks:
-
-    ```
-    # We strongly recommend using the required_providers block to set the
-    # Azure Provider source and version being used
-    terraform {
-      required_providers {
-        azurerm = {
-          source  = "hashicorp/azurerm"
-          version = "=3.0.0"
-        }
-      }
-    }
-
-    # Configure the Microsoft Azure Provider
-    provider "azurerm" {
-      features {}
-
-      client_id       = "9a709a52-7f63-46fa-9cb3-4a24b8d012ef"
-      client_secret   = "< INSERT_YOUR_CLIENT_SECRET_HERE >"
-      tenant_id       = "a198e3af-4618-44df-8241-0f411c95e41c"
-      subscription_id = "2276ba88-e0b2-4c57-a2b6-c21bf9c971a2"
-    }
-    ```
-10. Run:
-    ```
-    terraform init
-    ```
-    Followed by
-    ```
-    terraform validate
-    ```
-11. Note:
-    - The first command initializes Terraform with your provider configuration
-    - The second validates your Terraform syntax.
-10. At this point running either terraform plan or terraform apply should allow Terraform to run using the Service Principal to authenticate.
-
-### Create a Resource Group named `backend-rg`
-
-1. Open https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group to review the Terraform Documentation for Azure Resource Groups, or azurerm.resource_groups resource.
-2. Review the Arguments Reference
-3. Take a note of what is Required and what is Optional
-4. Next, take a look at the Attributes Reference section.  This tells you what values can be exported
-5. Create a new file in your VS Code directory called `resource_groups.tf`
-6. Using the Example Usage and arguments reference, create a new Resource Group block
-7. This should look something like this:
-    ```
-    resource "azurerm_resource_group" "tf_name"
-      name = "rg-<name prefix>-eus2"              # REPLACE <name prefix> with the first letter of your first name and full last name, i.e. jbaldridge
-      location = "East US 2"                      # Use East US 2, BHS's primary region
-8. Once complete, save your file with CTRL+S
-9. Perform the Holy Trinity, the best friend to any Terraform Developer:
-    ```
-    terraform init -upgrade ; terraform validate ; terraform plan
-    ```
-10. Review your plan for errors
-11. Assuming your plan has passed, apply your plan with:
-    ```
-    terraform apply -auto-approve
-    ```
-12. Go to your Azure subscription and validate that your resource group has deployed.
