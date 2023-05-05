@@ -139,7 +139,7 @@
       features {}
 
       client_id       = "9a709a52-7f63-46fa-9cb3-4a24b8d012ef"
-      client_secret   = "< YOUR CLIENT SECRET HERE >"
+      client_secret   = "< INSERT_YOUR_CLIENT_SECRET_HERE >"
       tenant_id       = "a198e3af-4618-44df-8241-0f411c95e41c"
       subscription_id = "2276ba88-e0b2-4c57-a2b6-c21bf9c971a2"
     }
