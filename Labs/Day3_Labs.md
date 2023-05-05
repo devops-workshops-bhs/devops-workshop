@@ -105,7 +105,7 @@
   - https://github.com
   - Alternatively, you may use your BHS GitHub account
 
-### Creaet an Organization
+### Create an Organization
   1. In the upper-right corner of any page, click the `+` drop-down, then click `New organization`.
   2. Select `Join for free`
   3. Create an Organization account name

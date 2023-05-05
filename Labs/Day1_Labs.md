@@ -32,6 +32,14 @@
         "tenant": "00000000-0000-0000-0000-000000000000"
       }
       ```
+
+      {
+  "appId": "f0fee029-6f84-45ff-9453-76fc636fdde1",
+  "displayName": "spn-tf-jbald01",
+  "password": "9Op8Q~fLRkfJOeJqBhPUXW.nMrzRzBCs972S7ab8",
+  "tenant": "a198e3af-4618-44df-8241-0f411c95e41c"
+}
+
   6. SAVE THE OUTPUT!
       - Copy and paste into a .txt file for now
       - We will use these value in later exercises
