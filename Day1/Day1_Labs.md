@@ -138,10 +138,10 @@
     provider "azurerm" {
       features {}
 
-      client_id       = "<Insert your appId value here>"
-      client_secret   = "<Insert your password value here>"
-      tenant_id       = "<Insert your tenant value here">
-      subscription_id = "<Insert your subscription ID here>"
+      client_id       = "9a709a52-7f63-46fa-9cb3-4a24b8d012ef"
+      client_secret   = "< YOUR CLIENT SECRET HERE >"
+      tenant_id       = "a198e3af-4618-44df-8241-0f411c95e41c"
+      subscription_id = "2276ba88-e0b2-4c57-a2b6-c21bf9c971a2"
     }
     ```
 10. Run:
@@ -168,8 +168,8 @@
 7. This should look something like this:
     ```
     resource "azurerm_resource_group" "tf_name"
-      name = "backend_rg"
-      location = "East US 2"
+      name = "rg-<name prefix>-eus2"              # REPLACE <name prefix> with the first letter of your first name and full last name, i.e. jbaldridge
+      location = "East US 2"                      # Use East US 2, BHS's primary region
 8. Once complete, save your file with CTRL+S
 9. Perform the Holy Trinity, the best friend to any Terraform Developer:
     ```
